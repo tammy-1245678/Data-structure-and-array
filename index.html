@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Array Example</title>
+</head>
+<body>
+    <h1>Object and Array Example</h1>
+    
+    <div>
+        <h2>Person Details</h2>
+        <p id="personName"></p>
+        <p id="personAge"></p>
+        <p id="personCity"></p>
+    </div>
+
+    <div>
+        <h2>Hobbies</h2>
+        <p id="hobby1"></p>
+        <p id="hobby2"></p>
+    </div>
+
+    <div>
+        <h2>All Hobbies as a String</h2>
+        <p id="hobbiesString"></p>
+    </div>
+
+    <div>
+        <h2>After Removing Last Hobby</h2>
+        <p id="removedHobby"></p>
+        <p id="hobbiesAfterPop"></p>
+    </div>
+
+    <script>
+        // Step 1: Create an object
+        let person = {
+            name: "Hania",
+            age: 17,
+            city: "Pakistan"
+        };
+
+        // Step 2: Create an array
+        let hobbies = ["Reading", "Painting", "sketching", "Coding"];
+
+        // Step 3: Display values using object keys
+        document.getElementById("personName").textContent = "Person's Name: " + person.name;
+        document.getElementById("personAge").textContent = "Person's Age: " + person.age;
+        document.getElementById("personCity").textContent = "Person's City: " + person.city;
+
+        // Step 4: Display values using array indices
+        document.getElementById("hobby1").textContent = "First Hobby: " + hobbies[0];
+        document.getElementById("hobby2").textContent = "Second Hobby: " + hobbies[1];
+
+        // Step 5: Use join() to display the array as a string
+        document.getElementById("hobbiesString").textContent = "All Hobbies: " + hobbies.join(", ");
+
+        // Step 6: Use pop() to remove and display the last element of the array
+        let lastHobby = hobbies.pop();
+        document.getElementById("removedHobby").textContent = "Last Hobby Removed: " + lastHobby;
+
+        // Display the array after using pop()
+        document.getElementById("hobbiesAfterPop").textContent = "Hobbies after removing last: " + hobbies.join(", ");
+    </script>
+</body>
+</html>
